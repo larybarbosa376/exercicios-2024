@@ -1,1 +1,432 @@
-/* You can add global styles to this file, and also import other style files */
+$first-color: #ED7839;
+$second-color: #FDF1EB;
+$third-color:#725C5C;
+body{
+    margin:0;
+    padding:0;
+    font-family: "Roboto", sans-serif;
+}
+.main{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  height:100%;
+}
+.menu{ 
+  height: 100%;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.logo{
+  height:68px;
+  background-color: $first-color;
+  color: #ffffff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.container{
+  background-color:#F6F9FA;
+}
+.menu-item{
+  height: 35px;
+  font-size:15px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  display:flex;
+  align-items: center;
+  margin-left: 10px;
+  cursor:pointer;
+}
+#trabalho{
+    background-color: $second-color;
+    font-weight: bold;
+    color: $first-color;
+}
+.header{
+  background-color: $second-color;
+  height: 68px;
+  padding-left: 70px;
+  display:flex;
+  justify-content: space-between;
+}
+.header-text{
+  display:flex;
+  flex-direction: column;
+  padding-top:2px;
+  color: $third-color;
+}
+.select-button{
+  font-size:14px;
+  display: flex; 
+  cursor:pointer;
+  align-items: center;
+  justify-content: center;
+}
+#select-lenguage{
+  background-color: transparent;
+}
+.wellcome{
+  display:flex;
+  flex-direction: column;
+}
+.wellcome span:first-child{
+  display:flex;
+  justify-content: flex-end;
+}
+.perfil{
+  display:flex;
+  justify-items: center;
+  align-items: center;
+  padding-right:15px;
+  gap:5px;
+}
+.perfil-data{
+  display:flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.m-0{
+  margin:0;
+  font-size: 20px;
+}
+.container-content{
+    padding: 30px 200px 0px 110px;
+}
+.container-title, .video-details{
+    display: flex;
+    padding-left: 20px;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.title{
+  display: flex;
+  justify-content: space-evenly;
+  color: $first-color;
+  font-size: 20px;
+  width: 780px;
+}
+.title-btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.btn-default{
+  background-color: $first-color;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+#download-btn{
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+.container-video{
+  color:white;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  background-image: url('./assets/video-image.png');
+  cursor:pointer;
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  font-weight: bold;
+  max-height: max-content;
+  max-width: max-content;
+}
+.image-video-perfil{
+  border-radius:50%;
+  width:55px;
+  height: 50px;
+}
+.profile-name{
+    gap: 5px;
+    font-size:20px ;
+}
+#video-title{
+  font-size: 20px;
+  width: 700px;
+}
+#video-profile{
+  display:flex;
+  gap:10px;
+  flex-direction: column;
+}
+.div-btns-quote{
+  display:flex;
+  gap:5px;
+  cursor:pointer;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.quote-link{
+  color:#ED7839;
+  cursor: pointer;
+}
+.details-card{
+  display:flex;
+  flex-direction: column;
+  width: 240px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+}
+.details-header{
+  background-color: $second-color;
+  font-size: 20px;
+  padding: 10px;
+  display:flex;
+  align-items: center;
+}
+.details-content{
+  display:flex;
+  flex-direction:column;
+  padding: 10px;
+}
+
+.details-content div span:first-child{
+  color: #5C5C5C;
+  font-size: 12px;
+}
+
+.details-content div span:nth-child(2) {
+  color: #5C5C5C;
+  font-weight: bold;
+  font-size: 12px;
+}
+.details-authors{
+  display:flex;
+  flex-direction:column;
+  gap: 5px;
+  padding: 10px;
+}
+.details-authors > span{
+  color: #5C5C5C;
+  font-weight: bold;
+  font-size: 14px;
+}
+.details-authors div{
+  display:flex;
+  flex-direction:column;
+  gap: 5px;
+  color: #5C5C5C;
+  font-size: 14px;
+}
+.details-footer{
+  display:flex;
+  flex-direction:column;
+  padding: 10px;
+  color:#ADA0A0;
+  font-size: 12px;
+}
+.p-15{
+    padding: 15px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+.input-group label{
+    color: $first-color;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.input-group input[type=text] {
+    height: 39px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    padding-left: 15px;
+    cursor:pointer;
+}
+.input-group textarea {
+    height: 82px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    padding-left: 15px;
+    cursor:pointer;
+}
+.footer-send{
+    background: #EAF1F2;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid #CCCCCC;
+} 
+#btn-send{
+    background-color: $first-color;
+    color: white;
+    padding: 8px;
+    width: 205px;
+    margin:4px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor:pointer;
+}
+.comment-section{
+    margin:20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.comment-header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+#discover{
+    color: $first-color;
+    font-size: medium ;
+    cursor:pointer;
+}
+.div-create{
+    display: flex;
+    justify-content: center;
+}
+.comment-span, .comment-icons{
+    color: $first-color;
+    font-weight: bold;
+    margin: 20px;
+}
+.comment-icons{
+    gap: 20px;
+}
+.comment-span-description{
+    margin: 20px;
+}
+.comment-cards{
+    padding-top: 15px;
+}
+.ops-topic-subject{
+    color: $first-color;
+    margin:0;
+}
+.coment-container{
+    font-size: medium;
+}
+#fa-heart{
+    background-color: $first-color;
+    padding: 4px;
+    color: white;
+    border-radius:4px;
+    cursor:pointer;
+}
+.answered-topic{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    cursor:pointer;
+}
+.filter{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+.filter a{
+    color: $first-color;
+    margin:10px;
+    cursor:pointer;
+    text-decoration: underline;
+}
+.resume-header, .comment-title{
+  background-color: $second-color;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.resume-section{
+  display: flex;
+  flex-direction: column;
+  margin:20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius:5px;
+}
+.resume-content{
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: max-height 0.3s ease;
+  padding: 5px 10px;
+}
+.resume-content.expanded {
+    max-height: max-content;
+}
+.btn-show-more{
+  background-color: transparent;
+  color: $first-color;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+}
+.additional-content {
+    display: none;
+}
+.page-footer{
+  margin:20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#btn-create{
+  background-color: $first-color;
+  color: white;
+  display:flex;
+  padding:10px;
+  gap: 5px;
+  cursor:pointer;
+  border: none;
+  border-radius: 5px;
+  justify-content:center;
+  font-size: 16px;
+}
+.div-create{
+  position: relative;
+  top: 15px;
+}
+.comments-footer{
+    padding: 5px;
+    gap: 10px;
+    font-size: small;
+    font-size: 15px;
+    cursor:pointer;
+    text-decoration: underline;
+}
+#feedback{
+    font-weight: bold;
+    margin: 0px 20px 20px 20px;
+    cursor:pointer;
+}

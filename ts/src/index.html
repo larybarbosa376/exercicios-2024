@@ -6,8 +6,134 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    
+  </style>
 </head>
 <body>
   <app-root></app-root>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function(){
+      var btnShowMore = document.getElementById('btn-show-more');
+      btnShowMore.addEventListener('click', toggleContent);
+    });
+
+    function toggleContent() {
+        var content = document.getElementById('resume-content');
+        var additionalContent = document.getElementById('additional-content');
+        var btnShowMore = document.getElementById('btn-show-more');
+        
+        btnShowMore.remove(); // Remove o botão "Ver Menos" se existir
+        if (content.classList.contains('expanded')) {
+            content.classList.remove('expanded');
+            additionalContent.style.display = 'none';
+            var paragraph = document.getElementById('show-less');
+            paragraph.insertAdjacentHTML('beforeend', '<button class="btn-show-more" id="btn-show-more">Ver Mais</button>');
+        } else {
+            content.classList.add('expanded');
+            additionalContent.style.display = 'block';
+            var paragraph = document.getElementById('additional-content');
+            paragraph.insertAdjacentHTML('beforeend', '<button class="btn-show-more" id="btn-show-more">Ver Menos</button>');
+        }
+        var btnShowMore = document.getElementById('btn-show-more');
+        btnShowMore.addEventListener('click', toggleContent);
+    }
+
+
+    function createTopicForm() {
+      const formData = document.getElementById("form-data");
+      const html = 
+      `<div>
+        <span>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</span>  
+      </div>
+      <form>
+        <div class="form">
+          <div class="input-group">
+            <label>Assunto</label>
+            <input type="text" class="subject" placeholder="Defina um tópico sucinto para notificar os autores...">
+          </div>
+          <div class="input-group">
+            <label>Conteúdo</label>
+            <textarea></textarea>
+          </div>
+        </div>
+        <div class="footer-send">
+          <button type="button" id="btn-send">Enviar</button>
+        </div>
+      </form>
+      `;
+
+      formData.innerHTML = html;
+
+      const btnSend = document.getElementById("btn-send");
+      btnSend.addEventListener("click", function(event) {
+        event.preventDefault();
+        createNewComment();
+        resetForm();
+      });
+    }
+
+    function createNewComment() {
+      const commentCards = document.querySelector('.comment-cards');
+      const htmlComment = 
+      `<div class="answered-topic new-topic" id="answered-topic-new-topic">
+        <div>
+          <h4 class="ops-topic-subject">Assunto da pergunta aqui! Assunto da pergunta aqui!</h4>
+          <span>Carlos Henrique Santos</span>
+        </div>
+        <div class="comments-container">
+          <span>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado d euismod mauris, in volutpat urd euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis.na. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. impacto de processo formativo processo...</span>
+        </div>
+        <div class="comments-footer">
+          <i class="fa-regular fa fa-heart" id="fa-heart"></i>
+          <span> Likes </span>
+          <span>Comments</span>
+        </div>
+        <div class="filter">
+          <i class="fa fa-check" aria-hidden="true"></i>
+          <span id="feedback">Aguardando feedback dos autores</span>
+          <a>Editar Tópico</a>
+        </div>  
+      </div>`;
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = htmlComment;
+      const newComment = tempDiv.firstChild;
+      
+      const answeredTopic = document.querySelector('.answered-topic');
+      commentCards.insertBefore(newComment, answeredTopic);
+    }
+
+    function resetForm() {
+      const formReturn = document.getElementById("form-data");
+      const htmlReturn = 
+      `<div>
+          <span class="comment-span">Seu tópico foi enviado com sucesso! :D</span>
+        </div>
+        <div>
+          <span>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</span>
+        </div>
+        <div>
+          <a id="discover"><span>Descubra outros trabalhos!</span></a>
+        <div class="div-create">
+          <button class="btn-create-topic" id="btn-create"><i class="fa fa-plus"></i> Criar Tópico</button>
+        </div>
+      `;
+      formReturn.innerHTML = htmlReturn;
+      const newBtnCreate = document.getElementById("btn-create");
+      newBtnCreate.addEventListener("click", function() {
+        createTopicForm();
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+      const btnCreate = document.getElementById("btn-create");
+      btnCreate.addEventListener("click", function() {
+        createTopicForm();
+      });
+    });
+
+
+  </script>
 </body>
 </html>
